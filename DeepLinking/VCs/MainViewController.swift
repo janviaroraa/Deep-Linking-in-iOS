@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .lightGray
     }
 }
 
@@ -19,9 +20,9 @@ extension MainViewController {
     func handleDeepLink(_ deepLink: DeepLink) {
         switch deepLink {
         case .home:
-            presentTabBar(withIndex: 0)
+            break
         case .scan:
-            presentTabBar(withIndex: 1)
+            break
         }
     }
 }

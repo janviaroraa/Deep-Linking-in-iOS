@@ -114,7 +114,6 @@
 		4152A1E829FBB79900B9419A /* DeepLinking */ = {
 			isa = PBXGroup;
 			children = (
-				4152A1EB29FBB79900B9419A /* SceneDelegate.swift */,
 				4152A1ED29FBB79900B9419A /* ViewController.swift */,
 				4152A1EF29FBB79900B9419A /* Main.storyboard */,
 				4152A1F229FBB79C00B9419A /* Assets.xcassets */,
@@ -145,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				4152A1E929FBB79900B9419A /* AppDelegate.swift */,
+				4152A1EB29FBB79900B9419A /* SceneDelegate.swift */,
 				4152A21A29FBB92600B9419A /* DeepLinks.swift */,
 			);
 			path = Files;

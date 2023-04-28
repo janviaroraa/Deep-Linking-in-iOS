@@ -41,12 +41,35 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to undo the changes made on entering the background.
     }
 
-    func sceneDidEnterBackground(_ scene: UIScene) {
+//    func sceneDidEnterBackground(_ scene: UIScene) {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+//    }
+    
+//    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+//        guard let url = URLContexts.first?.url else { return }
+//        if let scheme = url.scheme, scheme.localizedCaseInsensitiveContains("com.janvi.deeplink") == .orderedSame,
+//           let view = url.host {
+//            var params: [String : String] = [:]
+//            URLComponents(url: url, resolvingAgainstBaseURL: false)?.queryItems?.forEach({
+//                params[$0.name] = $0.value
+//            })
+//            print(params)
+//        }
+//    }
+    
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url = URLContexts.first?.url else { return }
+        let urlString = url.absoluteString
+        let component = urlString.components(separatedBy: "=")
+        print("URL: \(url)")
+        print("URL string: \(urlString)")
+        print("URL Components: \(component)")
     }
 
 
 }
 
+/// com.janvi.deeplink   =   URL
+///
