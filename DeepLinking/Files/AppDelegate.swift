@@ -10,10 +10,38 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
+    let mainViewController = MainViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.backgroundColor = .systemBackground
+        window?.rootViewController = MainViewController()
+        
+        return true
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        /// Processing the URL
+        guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true), let host = components.host else {
+            print("Invalid URL")
+            return false
+        }
+        print("Components: \(components)")
+        
+        /// Creation of deep link
+        guard let deepLink = DeepLink(rawValue: host) else {
+            print("DeepLink not found: \(host)")
+            return false
+        }
+        
+        /// Hand-off deep link to main VC
+        mainViewController.handleDeepLink(deepLink)
         return true
     }
 
