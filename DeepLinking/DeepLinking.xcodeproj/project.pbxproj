@@ -16,12 +16,7 @@
 		4152A20129FBB79C00B9419A /* DeepLinkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A20029FBB79C00B9419A /* DeepLinkingTests.swift */; };
 		4152A20B29FBB79C00B9419A /* DeepLinkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A20A29FBB79C00B9419A /* DeepLinkingUITests.swift */; };
 		4152A20D29FBB79C00B9419A /* DeepLinkingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A20C29FBB79C00B9419A /* DeepLinkingUITestsLaunchTests.swift */; };
-		4152A21B29FBB92600B9419A /* DeepLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A21A29FBB92600B9419A /* DeepLinks.swift */; };
-		4152A21E29FBB9C400B9419A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A21D29FBB9C400B9419A /* MainViewController.swift */; };
-		4152A22029FBB9D000B9419A /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A21F29FBB9D000B9419A /* Responder.swift */; };
-		4152A22229FBB9DD00B9419A /* VC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A22129FBB9DD00B9419A /* VC+Ext.swift */; };
-		4152A22529FBB9FE00B9419A /* HomeChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A22429FBB9FE00B9419A /* HomeChildViewController.swift */; };
-		4152A22729FBBA0A00B9419A /* ScanChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A22629FBBA0A00B9419A /* ScanChildViewController.swift */; };
+		4152A22929FBCEDB00B9419A /* InnerPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4152A22829FBCEDB00B9419A /* InnerPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,12 +50,7 @@
 		4152A20629FBB79C00B9419A /* DeepLinkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepLinkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4152A20A29FBB79C00B9419A /* DeepLinkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkingUITests.swift; sourceTree = "<group>"; };
 		4152A20C29FBB79C00B9419A /* DeepLinkingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkingUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4152A21A29FBB92600B9419A /* DeepLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinks.swift; sourceTree = "<group>"; };
-		4152A21D29FBB9C400B9419A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		4152A21F29FBB9D000B9419A /* Responder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
-		4152A22129FBB9DD00B9419A /* VC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Ext.swift"; sourceTree = "<group>"; };
-		4152A22429FBB9FE00B9419A /* HomeChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChildViewController.swift; sourceTree = "<group>"; };
-		4152A22629FBBA0A00B9419A /* ScanChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanChildViewController.swift; sourceTree = "<group>"; };
+		4152A22829FBCEDB00B9419A /* InnerPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				4152A21929FBB90F00B9419A /* Files */,
-				4152A21C29FBB9B100B9419A /* VCs */,
-				4152A22329FBB9EA00B9419A /* ChildVCs */,
 				4152A1E829FBB79900B9419A /* DeepLinking */,
 				4152A1FF29FBB79C00B9419A /* DeepLinkingTests */,
 				4152A20929FBB79C00B9419A /* DeepLinkingUITests */,
@@ -115,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				4152A1ED29FBB79900B9419A /* ViewController.swift */,
+				4152A22829FBCEDB00B9419A /* InnerPageVC.swift */,
 				4152A1EF29FBB79900B9419A /* Main.storyboard */,
 				4152A1F229FBB79C00B9419A /* Assets.xcassets */,
 				4152A1F429FBB79C00B9419A /* LaunchScreen.storyboard */,
@@ -145,28 +134,8 @@
 			children = (
 				4152A1E929FBB79900B9419A /* AppDelegate.swift */,
 				4152A1EB29FBB79900B9419A /* SceneDelegate.swift */,
-				4152A21A29FBB92600B9419A /* DeepLinks.swift */,
 			);
 			path = Files;
-			sourceTree = "<group>";
-		};
-		4152A21C29FBB9B100B9419A /* VCs */ = {
-			isa = PBXGroup;
-			children = (
-				4152A21D29FBB9C400B9419A /* MainViewController.swift */,
-				4152A21F29FBB9D000B9419A /* Responder.swift */,
-				4152A22129FBB9DD00B9419A /* VC+Ext.swift */,
-			);
-			path = VCs;
-			sourceTree = "<group>";
-		};
-		4152A22329FBB9EA00B9419A /* ChildVCs */ = {
-			isa = PBXGroup;
-			children = (
-				4152A22429FBB9FE00B9419A /* HomeChildViewController.swift */,
-				4152A22629FBBA0A00B9419A /* ScanChildViewController.swift */,
-			);
-			path = ChildVCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,14 +270,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4152A1EE29FBB79900B9419A /* ViewController.swift in Sources */,
-				4152A21B29FBB92600B9419A /* DeepLinks.swift in Sources */,
-				4152A22029FBB9D000B9419A /* Responder.swift in Sources */,
-				4152A22229FBB9DD00B9419A /* VC+Ext.swift in Sources */,
-				4152A22729FBBA0A00B9419A /* ScanChildViewController.swift in Sources */,
-				4152A22529FBB9FE00B9419A /* HomeChildViewController.swift in Sources */,
+				4152A22929FBCEDB00B9419A /* InnerPageVC.swift in Sources */,
 				4152A1EA29FBB79900B9419A /* AppDelegate.swift in Sources */,
 				4152A1EC29FBB79900B9419A /* SceneDelegate.swift in Sources */,
-				4152A21E29FBB9C400B9419A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

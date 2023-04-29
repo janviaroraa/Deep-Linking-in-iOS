@@ -9,32 +9,27 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-    let mainViewController = MainViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return true
     }
     
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        print("URL: \(url)")
+        print("URL Path: \(url.path)")
+        print("URL Host: \(String(describing: url.host))")
         
-        /// Processing the URL
-        guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true), let host = components.host else {
-            print("Invalid URL")
-            return false
-        }
-        print("Components: \(components)")
+        let urlPath: String = url.path 
+        let mainStoryBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        /// Creation of deep link
-        guard let deepLink = DeepLink(rawValue: host) else {
-            print("DeepLink not found: \(host)")
-            return false
+        if urlPath == "/inner" {
+            let innerPage: InnerPageVC = mainStoryBoard.instantiateViewController(withIdentifier: "InnerPageVC") as! InnerPageVC
+            self.window?.rootViewController = innerPage
         }
         
-        /// Hand-off deep link to main VC
-        mainViewController.handleDeepLink(deepLink)
+        self.window?.makeKeyAndVisible()
         return true
     }
 
